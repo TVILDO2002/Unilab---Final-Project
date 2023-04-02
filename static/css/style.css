@@ -149,6 +149,33 @@ header nav{
     text-transform: capitalize;
     margin-bottom: 20rem;
 }
+/******************* styling work ***********************/
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 4rem;
+    gap: 5rem;
+    background-color: #0f0d15;
+}
+.work div{
+    position: relative;
+}
+.work img{
+    width: 410px;
+    height: 230px;
+}
+
+.work span{
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    color: #4b0cec;
+    font-weight: var(--fw-bold);
+    padding-bottom: 20px;
+    border-bottom: 1px solid #4b0cec;
+    z-index: 100;
+    cursor: pointer;
+}
 
 /********** styling about **********/
 .about{
