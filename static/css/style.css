@@ -16,6 +16,9 @@
     --grey: #988e9f;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: var(--main-color);
     font-family: Roboto Condensed,Lato,Arial,sans-serif;
