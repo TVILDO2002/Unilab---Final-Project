@@ -151,18 +151,28 @@ header nav{
 }
 /******************* styling work ***********************/
 .work{
+    padding: 5rem 0;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 4rem;
+    justify-content: center;
     gap: 5rem;
     background-color: #0f0d15;
 }
 .work div{
     position: relative;
+    transition: 0.5s;
+    
+}
+.work div:hover{
+    transform: rotateY(35deg);
 }
 .work img{
     width: 410px;
     height: 230px;
+}
+.work img:hover{
+    transform: scale(1.2);
+    overflow: hidden;
 }
 
 .work span{
@@ -241,6 +251,9 @@ header nav{
     align-items: center;
     gap: 10px;
 }
+.social-wrapper a:hover{
+    color: var(--pink) ;
+}
 .social-wrapper    a:link, a:visited {
     transition: all .3s cubic-bezier(.165,.84,.44,1);
 }
@@ -268,6 +281,9 @@ header nav{
 .btn {
     margin: 30px 0;
     transition: transform .3s cubic-bezier(.175,.885,.32,1.275),bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955);
+}
+.btn a{
+    color: var(--main-color);
 }
 .btn {
     cursor: pointer;
@@ -315,6 +331,10 @@ header nav{
     justify-content: space-between;
     margin-bottom: 3rem;
 }
+.site-info ul a{
+    color: var(--main-color);
+}
+
 .site-info h2{
     font-size: var(--fs-32);
     font-weight: var(--fw-bold);
@@ -352,5 +372,17 @@ header nav{
     .social-wrapper{
         grid-template-columns: 50%;
     }
-    
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .site-info{
+        position: static;
+        height: auto;
+        width: 100%;
+        min-height: 0;
+    }
+    .site img{
+        width: 100%;
+    }
 }
