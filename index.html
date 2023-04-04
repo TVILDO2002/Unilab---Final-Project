@@ -17,21 +17,29 @@
     <meta property="og:image"  content=""/>
 </head>
 <body>
-    <header id="nav-leave">
+    <header id="nav-leave section">
         <nav class="nav-leave" id="nav-leave">
             <span class="site-logo"><b><</b>𝕋𝕧𝕚𝕝𝕕𝕠<b>/></b></span>
             <ul class="nav-links" id="nav-links">
                 <li>
-                    <a href="#">Start/></a>
+                    <a class="scl-indicator" href="#section1">
+                        <h3>Start/></h3>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Work/></a>
+                    <a class="scl-indicator" href="#section2">
+                        <h3>Work/></h3>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">About/></a>
+                    <a class="scl-indicator" href="#section3">
+                        <h3>About/></h3>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Contact/></a>
+                    <a class="scl-indicator" href="#section4">
+                       <h3>Contact/></h3>
+                    </a>
                 </li>
             </ul>
             <div class="nav-burger"  id="nav-burger">
@@ -42,16 +50,16 @@
         </nav>
     </header>
     <div class="bckgrd-img">
-        <section class="start container-1">
+        <section class="start container-1 section" id="section1">
             <h3 class="site-title">Start/></h3>
             <h2>Hi, my name is <b>Nika Tvildiani</b></h2>
-            <h2>I <em>design</em> and develop websites</h2>
+            <h2>I am <em><b>Front-end</b></em>, I develop websites</h2>
             <p>let me show you...</p>
         </section>
     </div>
     <main>
         <section>
-            <div class="work">
+            <div class="work section" id="section2">
                 <div>
                     <span>Nunito's Portfilio </span>
                     <a href="static/projects/project-1.html">
@@ -109,7 +117,7 @@
      
             </div>
         </section>
-        <section class="about">
+        <section class="about section" id="section3">
             <div class="container-2">
                 <h3 class="site-title">About/></h3>
                 <ol>
@@ -143,8 +151,8 @@
         
     </main>
     <footer>
-        <section class="contact-section">
-            <div class="contact container-1">
+        <section class="contact-section section" id="section4">
+            <div class="contact container-1 ">
                 <h3 class="site-title">Contact/></h3>
 
                 <h4>Find me on:</h4>
@@ -199,7 +207,36 @@
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-primary">Get in touch</button>
+                <button onclick="modalopen()" class="btn btn-primary">Get in touch</button>
+                    <div class="modal-wrapper" id="modal-wrapper">
+                        <div class="contact-modal">
+                            <div onclick="modalopen()" class="close">X</div>
+                            <h2>Get in Touch!</h2>
+                            <div class="modal-txt">
+                                <span>Hi, my name is</span>
+                                <span class="input-group">
+                                    <input class="input" type="text" placeholder=" ">
+                                    <label class="placeholder">Your name</label>
+                                </span>
+                                <span> and my email is</span>
+                                <span class="input-group">
+                                    <input class="input" type="email" required placeholder=" ">
+                                    <label class="placeholder">Your email</label>
+                                </span>
+                            </div>
+                            <button onclick="modalopen()" class="modal-btn">
+                                <div class="svg-wrapper-1">
+                                  <div class="svg-wrapper">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M0 0h24v24H0z" fill="none"></path>
+                                      <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </div>
                 <div class="copy">
                     <small>© Made with < / > by Tvildo. Tbilisi 2023.</small>
                 </div>
