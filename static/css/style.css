@@ -100,6 +100,9 @@ header nav{
     padding: 1rem;
     position: relative;
 }
+.active h3{
+    color: var(--blue);
+}
 .site-logo{
     font-weight: var(--fw-bold);
     font-size: var(--fs-50);
@@ -366,65 +369,6 @@ header nav{
 }
 /******** projects *****/
 
-@media (max-width:768px) {
-    header{
-        background: inherit;
-    }
-    header nav{
-        flex-direction: column;
-    }
-    .nav-links{
-        display: none;
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-    .nav-burger{
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
-    .nav-links__active{
-        display: flex;
-    }
-    .start h2{
-        font-size: 30px;
-    }
-    .social-wrapper{
-        grid-template-columns: 100%;
-    }
-    .projects{
-        display: flex;
-        flex-direction: column;
-    }
-    .site-info{
-        position: static;
-        height: auto;
-        width: 100%;
-        min-height: 0;
-    }
-    .site img{
-        width: 100%;
-    }
-    .work span{
-        left: -10px;
-    }
-}
-@media (max-width:405px) {
-    .work img {
-        width: 280px;
-        height: 200px;
-    }
-    .work span{
-        font-size: 16px;
-        display: none;
-    }
-}
-
-.active h3{
-    color: var(--blue);
-  }
-
 /********************** styling modal ****************************/
 .modal-wrapper{
     position: fixed;
@@ -550,30 +494,59 @@ input:not(:placeholder-shown)
     display: flex;
 }
 /********************** styling modal ****************************/
-.animation-wrapper{
-    display: flex; 
-    font-size: var(--fs-32);
-    color: var(--main-color);
+
+@media (max-width:768px) {
+    header{
+        background: inherit;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .nav-burger{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .nav-links__active{
+        display: flex;
+    }
+    .start h2{
+        font-size: 30px;
+    }
+    .social-wrapper{
+        grid-template-columns: 100%;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .site-info{
+        position: static;
+        height: auto;
+        width: 100%;
+        min-height: 0;
+    }
+    .site img{
+        width: 100%;
+    }
+    .work span{
+        left: -10px;
+    }
 }
-.animation {
-    height:50px;
-    overflow:hidden;
-    margin-left: 1rem;
-} 
-.animation > div > div {
-    padding: 0.25rem 0.75rem;
-    height:2.81rem;
-    margin-bottom: 2.81rem;
-    display:inline-block;
+@media (max-width:405px) {
+    .work img {
+        width: 280px;
+        height: 200px;
+    }
+    .work span{
+        font-size: 16px;
+        display: none;
+    }
 }
-  
-.animation div:first-child {
-    animation: text-animation 12s  infinite;
-    animation-delay: 3s;
-}
-@keyframes text-animation {
-    0% {margin-top: 0;}
-    50% {margin-top: -5.62rem;}
-    100% {margin-top: 0;}
-}
-  
+
