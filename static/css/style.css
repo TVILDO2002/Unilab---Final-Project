@@ -100,9 +100,6 @@ header nav{
     padding: 1rem;
     position: relative;
 }
-.active h3{
-    color: var(--blue);
-}
 .site-logo{
     font-weight: var(--fw-bold);
     font-size: var(--fs-50);

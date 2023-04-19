@@ -22,34 +22,6 @@ window.addEventListener("scroll", () => {
 
 Navburger.addEventListener("click", Navbaractive);
 
-const sections = document.querySelectorAll(".section");
-const scrollIndicators = document.querySelectorAll(".scl-indicator");
-
-function scrollIndicatorHandler(){
-    sections.forEach((section, index) => {
-        let sectionDistanceFromTop = section.offsetTop;
-        let sectionHeight = section.offsetHeight;
-        let lastElementQuantifier = index - (sections.length -1);
-        switch(lastElementQuantifier){
-            case 0:
-                if(window.pageYOffset >= (sectionDistanceFromTop - (window.outerHeight - sectionHeight)) && window.pageYOffset < (sectionDistanceFromTop + sectionHeight - (window.outerHeight - sectionHeight))){
-                    scrollIndicators[index].classList.add("active");
-                }
-                else{
-                    scrollIndicators[index].classList.remove("active");
-                }
-                break;
-            default:
-                if(window.pageYOffset >= (sectionDistanceFromTop - (window.outerHeight - sectionHeight)) && window.pageYOffset < (sections[index + 1].offsetTop - (window.outerHeight - sections[index + 1].offsetHeight))){
-                    scrollIndicators[index].classList.add("active");
-                }
-                else{
-                    scrollIndicators[index].classList.remove("active");
-                }  
-        }
-    })
-}
-document.addEventListener('scroll', scrollIndicatorHandler);
 
 // creating modal 
 const modal = document.getElementById("modal-wrapper");
