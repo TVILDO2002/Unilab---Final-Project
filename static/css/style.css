@@ -84,11 +84,11 @@ header {
     width: 100%;
     transition: 0.4s;
     background: transparent;
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
 }
 header:hover{
     background-color: #1a1527;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 1000;
 }
 .nav--hidden{
